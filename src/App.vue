@@ -1,14 +1,23 @@
 <template>
-  <Cover/>
+<div class="background">
+  <router-view></router-view>
+</div>
 </template>
 
 <script>
-import Cover from './components/Cover.vue'
-
 export default {
-  name: 'App',
-  components: {
-    Cover
-  }
+  name: 'App'
 }
 </script>
+<style lang="scss">
+.background {
+  background: linear-gradient(
+    to bottom,
+    rgb(231, 240, 253),
+    rgb(172, 203, 238)
+  );
+  min-height: 100vh;
+  max-height: 100vh;
+  z-index: 0;
+}
+</style>
