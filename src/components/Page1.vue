@@ -3,16 +3,14 @@
     <a-col :span="24" class="parentBox">
       <div
         v-if="true"
-        class="cardBox animate__animated animate__fadeInUp"
-      ></div>
+        class="cardBox"
+      >
+      </div>
     </a-col>
   </a-row>
 </template>
-<script> 
+<script>
 export default {
-  setup() {
-      
-  },
 };
 </script>
 <style lang="scss" scoped>
@@ -27,7 +25,12 @@ export default {
   align-self: center;
   justify-self: center;
   min-height: 85%;
-  min-width: 85%;
+  width: 85%;
   display: flex;
+  animation: 0.5s ease-out resize;
+}
+@keyframes resize {
+  from { width: 49.6%; } to { width: 85%; } 
+  
 }
 </style>
